@@ -1,11 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aroma Khatulistiwa - Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+    <!-- Bagian Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Aroma Khatulistiwa</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Our Profile</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#message-us">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Bagian Home -->
+        <section id="home" class="welcome-section">
+            <h1>Hi <span id="guest-name">Guest</span>, Welcome To Aroma Khatulistiwa</h1>
+            <p>Aroma Khatulistiwa lahir dari kekayaan tanah Borneo. Kami menyajikan kopi spesialti yang bijinya dipetik langsung dari para petani lokal di sekitar garis khatulistiwa Indonesia. Misi kami adalah untuk menghadirkan cita rasa kopi asli nusantara yang otentik, sekaligus mengangkat kesejahteraan para petani kopi yang menjadi mitra kami. Setiap cangkir adalah sebuah cerita, setiap aroma adalah sebuah inspirasi.</p>
+        </section>
+
+        <section id="profile" class="our-story-section">
+            <div class="story-container">
+                <div class="story-image">
+                    <img src="https://placehold.co/600x800/8B4513/FFFFFF?text=Biji+Kopi+Pilihan" alt="[Gambar biji kopi pilihan dari Borneo]">
+                </div>
+                <div class="story-content">
+                    <h2>Cerita Kami</h2>
+                    <h3>Secangkir Inspirasi dari Jantung Borneo.</h3>
+                    <p>
+                        <strong>Aroma Khatulistiwa</strong> lahir dari kekayaan tanah Borneo. Kami menyajikan kopi spesialti yang bijinya dipetik langsung dari para petani lokal di sekitar garis khatulistiwa Indonesia.
+                    </p>
+                    <p>
+                        Misi kami adalah untuk menghadirkan cita rasa kopi asli nusantara yang otentik, sekaligus mengangkat kesejahteraan para petani kopi yang menjadi mitra kami. Setiap cangkir adalah sebuah cerita, setiap aroma adalah sebuah inspirasi.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Portfolio -->
+        <section id="portfolio" class="portfolio-section">
+            <h2>Portfolio Produk Kami</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://placehold.co/600x400/A52A2A/FFFFFF?text=Khatulistiwa+Gold" alt="Gambar Biji Kopi Khatulistiwa Gold">
+                    <h3>Khatulistiwa Gold</h3>
+                    <p>Perpaduan seimbang antara biji Arabika dan Robusta pilihan dari dataran tinggi Borneo.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Borneo+Breeze" alt="Gambar Biji Kopi Borneo Breeze">
+                    <h3>Borneo Breeze</h3>
+                    <p>100% Arabika dengan proses honey, memberikan aroma bunga yang segar.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://placehold.co/600x400/654321/FFFFFF?text=Es+Kopi+Susu" alt="Gambar Es Kopi Susu">
+                    <h3>Es Kopi Susu Khatulistiwa</h3>
+                    <p>Kopi susu kekinian dengan gula aren asli Kalimantan. Creamy, legit, dan pas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Message Us -->
+        <section id="message-us" class="message-us-section">
+            <h2>Message Us</h2>
+            <div class="message-us-container">
+                <!-- Kolom Formulir Kontak -->
+                <div class="form-column">
+                    <form id="contact-form" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="nama">Nama:</label>
+                            <input type="text" id="nama" name="nama">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="telepon">Nomor Telepon:</label>
+                            <input type="tel" id="telepon" name="telepon">
+                        </div>
+                        <div class="form-group">
+                            <label for="pesan">Pesan:</label>
+                            <textarea id="pesan" name="pesan" rows="5"></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <!-- Kolom Output Hasil Submit -->
+                <div class="output-column">
+                    <p><strong>Current time:</strong> <span id="current-time">-</span></p>
+                    <hr>
+                    <p><strong>Nama:</strong> <span id="output-nama">-</span></p>
+                    <p><strong>Email:</strong> <span id="output-email">-</span></p>
+                    <p><strong>Nomor Telepon:</strong> <span id="output-telepon">-</span></p>
+                    <p><strong>Pesan:</strong> <span id="output-pesan">-</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bagian Footer -->
+    <footer>
+        <p>Created by Aroma Khatulistiwa</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

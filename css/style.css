@@ -1,0 +1,400 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Variabel Warna  --- */
+:root {
+    --primary-color: #6F4E37; 
+    --secondary-color: #F5F5DC; 
+    --dark-color: #333;
+    --light-color: #fff;
+    --gray-color: #f4f4f4;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+/* --- Header dan Navigasi --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--light-color);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #A52A2A; 
+}
+
+/* --- Halaman Utama (index.html) --- */
+
+/* Bagian Welcome */
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+    background-color: var(--gray-color);
+}
+
+.welcome-section h1 {
+    font-size: 3rem;
+}
+
+.our-story-section {
+    background-color: var(--light-color);
+}
+
+.story-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.story-content {
+    flex: 1.5; 
+}
+
+.story-content h2 {
+    text-align: left; 
+    font-size: 2.5rem;
+}
+
+.story-content h3 {
+    font-style: italic;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.story-content p {
+    margin-bottom: 1rem;
+}
+
+
+/* Bagian Portfolio */
+.portfolio-section {
+    background-color: var(--light-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portfolio-item {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-item h3 {
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+.portfolio-item p {
+    padding: 0 1rem 1rem;
+}
+
+/* Bagian Message Us */
+.message-us-section {
+    background-color: var(--gray-color);
+}
+
+.message-us-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.message-us-container button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.message-us-container button:hover {
+    background-color: #A52A2A;
+}
+
+.output-column {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.output-column p {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Halaman Profil (profile.html) --- */
+
+/* Banner Profil */
+.profile-banner {
+    height: 40vh;
+    background-image: url('https://placehold.co/1920x1080/6F4E37/FFFFFF?text=Aroma+Khatulistiwa');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+}
+
+/* Section Profil Umum */
+.profile-section {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-section p, .profile-section ul {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.profile-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Visi dan Misi */
+.vision-mission-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.vision, .mission {
+    flex: 1;
+    background-color: var(--gray-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+/* Kantor Pusat */
+.headquarters-section {
+    background-color: var(--gray-color);
+}
+
+.headquarters-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.hq-item .circle {
+    width: 150px;
+    height: 150px;
+    background-color: var(--light-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+.hq-item p {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+/* --- Desain Responsif --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .navbar .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .nav-links a {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    .welcome-section h1, .banner-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .message-us-container {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-mission-container {
+        flex-direction: column;
+    }
+
+    .headquarters-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hq-item .circle {
+        width: 120px;
+        height: 120px;
+    }
+}
